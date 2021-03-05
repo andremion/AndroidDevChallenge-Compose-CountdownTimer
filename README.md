@@ -18,7 +18,7 @@ All the help I needed I've got from [Developer Android site](https://developer.a
 There's a lot of content there that made me possible to build that screen combining states and animations APIs
 
 ## :camera_flash: Screenshots
-<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
+<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">&emsp;<img src="/results/video.mp4" width="260">
 
 ## License
 ```
