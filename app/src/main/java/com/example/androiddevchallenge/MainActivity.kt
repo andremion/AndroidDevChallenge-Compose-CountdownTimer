@@ -18,16 +18,15 @@ package com.example.androiddevchallenge
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.view.WindowCompat
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             MyTheme {
                 MyApp()
@@ -39,12 +38,10 @@ class MainActivity : AppCompatActivity() {
 // Start building your app here!
 @Composable
 fun MyApp() {
-    Surface(color = MaterialTheme.colors.background) {
-        Text(text = "Ready... Set... GO!")
-    }
+    CountdownTimer()
 }
 
-@Preview("Light Theme", widthDp = 360, heightDp = 640)
+@Preview("Light Theme", widthDp = 360, heightDp = 640, showBackground = true)
 @Composable
 fun LightPreview() {
     MyTheme {
@@ -52,7 +49,7 @@ fun LightPreview() {
     }
 }
 
-@Preview("Dark Theme", widthDp = 360, heightDp = 640)
+@Preview("Dark Theme", widthDp = 360, heightDp = 640, showBackground = true)
 @Composable
 fun DarkPreview() {
     MyTheme(darkTheme = true) {
